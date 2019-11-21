@@ -17,8 +17,8 @@ A GCP project can have up to five VPC networks, and each Compute Engine instance
     $ vim ~/.profile
     Add `export "PATH=$PATH:~/Downloads"` to ~/.profile
   ```
-2. `$ mkdir -p ~/terraform/vpc`
-3. Verify installation: `$ terraform`
+2. Verify installation: `$ terraform` or `$ terraform --version`
+3. `$ mkdir -p ~/terraform/vpc`
 
 ### Google Cloud Platform
 1. [Create project](https://console.cloud.google.com/projectcreate) from GCP console
@@ -26,7 +26,7 @@ A GCP project can have up to five VPC networks, and each Compute Engine instance
 3. Navigate to Credentials from the left panel and select **Create Credentials** > choose **Service account key** from the dropdown > **New service account**:
       + Choose a name and set role to **Editor**
       + **JSON** > **Create**
-      + Now you will see your private key will download to your local machine.
+      + Now the private key will download to your local machine.
 4. [Install](https://cloud.google.com/sdk/docs/downloads-interactive) the [gcloud CLI](https://cloud.google.com/sdk/gcloud/). For Linux/Mac:
 
   ```
@@ -34,7 +34,7 @@ A GCP project can have up to five VPC networks, and each Compute Engine instance
     $ exec -l $SHELL
     $ gcloud init
   ```
-5. From `~/terraform/vpc`, create a Terraform config file, `main.tf` with the following configuration:
+5. From `~/terraform/vpc`, create a Terraform config file, `main.tf`, with the following configuration:
 
       + **Note:** You will need to edit the values of the following argument names (credentials, project)
 
@@ -74,4 +74,5 @@ A GCP project can have up to five VPC networks, and each Compute Engine instance
     + You should now see `Terraform has been successfully initialized!`
 7. `$ terraform apply` and enter 'yes' to continue.
     + You should now see `Apply complete! Resources: 2 added, 0 changed, 0 destroyed.`
-    + Now head back to the GCP console to see your newly created VM instance  
+    + Now head back to the GCP console to see your newly created VM instance from your project's custom url: 
+    `https://console.cloud.google.com/compute/instances?project=<PROJECT_ID>` substituting <PROJECT-ID>
