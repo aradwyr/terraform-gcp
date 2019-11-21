@@ -16,25 +16,25 @@ A GCP project can have up to five VPC networks, and each Compute Engine instance
     $ mv terraform Downloads/
     $ vim ~/.profile
   ```
-  Add `export "PATH=$PATH:~/Downloads"` to ~/.profile
+  + Add `export "PATH=$PATH:~/Downloads"` to ~/.profile
 2. `$ mkdir -p ~/terraform/vpc`
 3. Verify installation: `$ terraform`
 
 ### Google Cloud Platform
 1. [Create project](https://console.cloud.google.com/projectcreate) from GCP console
-5. From the GCP main menu ☰ > Enable the Compute Engine API
-6. Navigate to Credentials from the left panel and select **Create Credentials** > choose **Service account key** from the dropdown > **New service account**:
+2. From the GCP main menu ☰ > Enable the Compute Engine API
+3. Navigate to Credentials from the left panel and select **Create Credentials** > choose **Service account key** from the dropdown > **New service account**:
       + Choose a name and set role to **Editor**
       + **JSON** > **Create**
       + Now you will see your private key will download to your local machine.
-7. [Install](https://cloud.google.com/sdk/docs/downloads-interactive) the [gcloud CLI](https://cloud.google.com/sdk/gcloud/). For Linux/Mac:
+4. [Install](https://cloud.google.com/sdk/docs/downloads-interactive) the [gcloud CLI](https://cloud.google.com/sdk/gcloud/). For Linux/Mac:
 
   ```
     $ curl https://sdk.cloud.google.com | bash
     $ exec -l $SHELL
     $ gcloud init
   ```
-8. From `~/terraform/vpc`, create a Terraform config file, `main.tf` with the following configuration:
+5. From `~/terraform/vpc`, create a Terraform config file, `main.tf` with the following configuration:
 
   **Note:** You will need to edit the values of the following argument names (credentials, project)
 
@@ -70,8 +70,8 @@ A GCP project can have up to five VPC networks, and each Compute Engine instance
 
   ```
 
-9. `$ terraform init`
+6. `$ terraform init`
     + You should now see `Terraform has been successfully initialized!`
-10. `$ terraform apply` and enter 'yes' to continue.
+7. `$ terraform apply` and enter 'yes' to continue.
     + You should now see `Apply complete! Resources: 2 added, 0 changed, 0 destroyed.`
     + Now head back to the GCP console to see your newly created VM instance  
