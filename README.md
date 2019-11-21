@@ -74,5 +74,5 @@ A GCP project can have up to five VPC networks, and each Compute Engine instance
     + You should now see `Terraform has been successfully initialized!`
 7. `$ terraform apply` and enter 'yes' to continue.
     + You should now see `Apply complete! Resources: 2 added, 0 changed, 0 destroyed.`
-    + Now head back to the GCP console to see your newly created VM instance from your project's custom url: 
-    `https://console.cloud.google.com/compute/instances?project=<PROJECT_ID>` substituting <PROJECT-ID>
+    + From the GCP console you can see your newly created VM instance, substituting <PROJECT_ID>: 
+    `https://console.cloud.google.com/compute/instances?project=<PROJECT_ID>` 
