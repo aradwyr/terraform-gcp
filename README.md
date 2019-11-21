@@ -16,7 +16,7 @@ A GCP project can have up to five VPC networks, and each Compute Engine instance
     $ mv terraform Downloads/
     $ vim ~/.profile
   ```
-  + Add `export "PATH=$PATH:~/Downloads"` to ~/.profile
+    + Add `export "PATH=$PATH:~/Downloads"` to ~/.profile
 2. `$ mkdir -p ~/terraform/vpc`
 3. Verify installation: `$ terraform`
 
@@ -36,7 +36,7 @@ A GCP project can have up to five VPC networks, and each Compute Engine instance
   ```
 5. From `~/terraform/vpc`, create a Terraform config file, `main.tf` with the following configuration:
 
-  **Note:** You will need to edit the values of the following argument names (credentials, project)
+      + **Note:** You will need to edit the values of the following argument names (credentials, project)
 
   ```
     provider "google" {
