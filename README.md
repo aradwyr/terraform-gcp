@@ -1,4 +1,4 @@
-# Automating a Chaos Engineering Environment (via Gremlin) on GCP with Terraform
+# Automating a GCP VM with Terraform
 
 ## Requirements
 1. Google Cloud Platform(GCP) Project
